@@ -21,13 +21,13 @@ GET http://localhost:5000/uploads/orig_test2.jpg   (example)
 Returns processed image with count and type in image.
 
 Circle pill:
-<img src="https://github.com/jeunetoujour/PillCounter/blob/master/pics/orig_test2.jpg" width="256" height="256" title="Original Image">
-<img src="https://github.com/jeunetoujour/PillCounter/blob/master/pics/cv_orig_test2.jpg" width="256" height="256" title="Processed Image">
+<img src="https://github.com/jeunetoujour/PillCounter/blob/master/pics/orig_test2.jpg" width="300" height="300" title="Original Image">
+<img src="https://github.com/jeunetoujour/PillCounter/blob/master/pics/cv_orig_test2.jpg" width="300" height="300" title="Processed Image">
 
 Oblong Pills:
-<img src="https://github.com/jeunetoujour/PillCounter/blob/master/pics/fat_test_2.jpg" width="256" height="256" title="Original Image">
-<img src="https://github.com/jeunetoujour/PillCounter/blob/master/pics/cv_fat_test_2.jpg" width="256" height="256" title="Processed Image">
+<img src="https://github.com/jeunetoujour/PillCounter/blob/master/pics/fat_test_2.jpg" width="300" height="300" title="Original Image">
+<img src="https://github.com/jeunetoujour/PillCounter/blob/master/pics/cv_fat_test_2.jpg" width="300" height="300" title="Processed Image">
 
 Superman Pills:
-<img src="https://github.com/jeunetoujour/PillCounter/blob/master/pics/orig_test7.jpg" width="256" height="256" title="Original Image">
-<img src="https://github.com/jeunetoujour/PillCounter/blob/master/pics/cv_orig_test7.jpg" width="256" height="256" title="Original Image">
+<img src="https://github.com/jeunetoujour/PillCounter/blob/master/pics/orig_test7.jpg" width="300" height="300" title="Original Image">
+<img src="https://github.com/jeunetoujour/PillCounter/blob/master/pics/cv_orig_test7.jpg" width="300" height="300" title="Original Image">
