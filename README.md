@@ -21,5 +21,13 @@ GET http://localhost:5000/uploads/orig_test2.jpg   (example)
 Returns processed image with count and type in image.
 
 Example of a circle pill:
-![Original Image](https://github.com/jeunetoujour/PillCounter/blob/master/pics/orig_test2.jpg)
-![Processed Image](https://github.com/jeunetoujour/PillCounter/blob/master/pics/cv_orig_test2.jpg)
+![Original Image](https://github.com/jeunetoujour/PillCounter/blob/master/pics/orig_test2.jpg?s=300)
+![Processed Image](https://github.com/jeunetoujour/PillCounter/blob/master/pics/cv_orig_test2.jpg?s=300)
+
+Oblong Pills:
+![Original Image](https://github.com/jeunetoujour/PillCounter/blob/master/pics/fat_test2.jpg?s=300)
+![Processed Image](https://github.com/jeunetoujour/PillCounter/blob/master/pics/cv_fat_test2.jpg?s=300)
+
+Superman Pills:
+![Original Image](https://github.com/jeunetoujour/PillCounter/blob/master/pics/orig_test7.jpg?s=300)
+![Processed Image](https://github.com/jeunetoujour/PillCounter/blob/master/pics/cv_orig_test7.jpg?s=300)
