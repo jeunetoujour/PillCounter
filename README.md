@@ -19,3 +19,7 @@ Returns: count=some number
 After its done, it will save the processed file in your /uploads directory. You can call the service to get the image.
 GET http://localhost:5000/uploads/orig_test2.jpg   (example)
 Returns processed image with count and type in image.
+
+Example of a circle pill:
+![Original Image](https://github.com/jeunetoujour/PillCounter/blob/master/pics/orig_test2.jpg)
+![Processed Image](https://github.com/jeunetoujour/PillCounter/blob/master/pics/cv_orig_test2.jpg)
