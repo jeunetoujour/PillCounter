@@ -31,3 +31,7 @@ Oblong Pills:
 Superman Pills:
 <img src="https://github.com/jeunetoujour/PillCounter/blob/master/pics/orig_test7.jpg" width="300" height="300" title="Original Image">
 <img src="https://github.com/jeunetoujour/PillCounter/blob/master/pics/cv_orig_test7.jpg" width="300" height="300" title="Original Image">
+
+Advil Pills(Writing on pill!):
+<img src="https://github.com/jeunetoujour/PillCounter/blob/master/pics/orig_test6.jpg" width="300" height="300" title="Original Image">
+<img src="https://github.com/jeunetoujour/PillCounter/blob/master/pics/cv_orig_test6.jpg" width="300" height="300" title="Original Image">
