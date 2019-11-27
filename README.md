@@ -20,14 +20,14 @@ After its done, it will save the processed file in your /uploads directory. You 
 GET http://localhost:5000/uploads/orig_test2.jpg   (example)
 Returns processed image with count and type in image.
 
-Example of a circle pill:
-![Original Image](https://github.com/jeunetoujour/PillCounter/blob/master/pics/orig_test2.jpg){:height="30%" width="30%"}
-![Processed Image](https://github.com/jeunetoujour/PillCounter/blob/master/pics/cv_orig_test2.jpg){:height="30%" width="30%"}
+Circle pill:
+<img src="https://github.com/jeunetoujour/PillCounter/blob/master/pics/orig_test2.jpg" width="256" height="256" title="Original Image">
+<img src="https://github.com/jeunetoujour/PillCounter/blob/master/pics/cv_orig_test2.jpg" width="256" height="256" title="Processed Image">
 
 Oblong Pills:
-![Original Image](https://github.com/jeunetoujour/PillCounter/blob/master/pics/fat_test_2.jpg)<!-- .element height="25%" width="25%" -->
-![Processed Image](https://github.com/jeunetoujour/PillCounter/blob/master/pics/cv_fat_test_2.jpg)<!-- .element height="25%" width="25%" -->
+<img src="https://github.com/jeunetoujour/PillCounter/blob/master/pics/fat_test_2.jpg" width="256" height="256" title="Original Image">
+<img src="https://github.com/jeunetoujour/PillCounter/blob/master/pics/cv_fat_test_2.jpg" width="256" height="256" title="Processed Image">
 
 Superman Pills:
-![Original Image](https://github.com/jeunetoujour/PillCounter/blob/master/pics/orig_test7.jpg)<!-- .element height="25%" width="25%" -->
-![Processed Image](https://github.com/jeunetoujour/PillCounter/blob/master/pics/cv_orig_test7.jpg)<!-- .element height="25%" width="25%" -->
+<img src="https://github.com/jeunetoujour/PillCounter/blob/master/pics/orig_test7.jpg" width="256" height="256" title="Original Image">
+<img src="https://github.com/jeunetoujour/PillCounter/blob/master/pics/cv_orig_test7.jpg" width="256" height="256" title="Original Image">
