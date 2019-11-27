@@ -1,14 +1,14 @@
 #Made by Steven Lewis
+#github.com/jeunetoujour
 import cv2
 import numpy as np
 import bisect
 import math
 from flask import Flask, request, redirect, send_from_directory
-from scipy._lib.six import xrange
 from werkzeug.utils import secure_filename
 
 debug = False
-UPLOAD_FOLDER = '/Users/jeunetoujour/uploads'
+UPLOAD_FOLDER = '/home/slewis0/uploads'
 ALLOWED_EXTENSIONS = set(['jpg', 'jpeg'])
 
 app = Flask(__name__)
@@ -22,7 +22,9 @@ def allowed_file(filename):
 
 
 def upload_file():
+    print("Inside")
     if request.method == 'POST':
+
         # check if the post request has the file part
         if 'file' not in request.files:
             #flash('No file part')
@@ -188,7 +190,7 @@ def upload_file():
               )
               defectFound = False
               erode_threshold = 3.25
-              for i in xrange(0, len(contours)):
+              for i in range(0, len(contours)):
               #for contour in contours:
 
                 contour = contours[i]
@@ -244,7 +246,7 @@ def upload_file():
                         cv2.CHAIN_APPROX_SIMPLE
                     )
                     #draw contours on old image with white
-                    for j in xrange(0, len(new_contours)):
+                    for j in range(0, len(new_contours)):
                         cnt = new_contours[j]
                         hier = new_hierarchy[0][j]
                         if hier[3] == -1:
@@ -377,23 +379,23 @@ def upload_file():
                 cv2.drawContours(orig, [box], 0, (0, 205, 0), 18)
 
             #end of program, write count on Image, and save final image with AR info
-            cv2.putText(orig, "Count: " + str(j), (40, 280), cv2.FONT_HERSHEY_SIMPLEX, 11, (255, 255, 255), 11)
+            cv2.putText(orig, "Count: " + str(j), (40, 280), cv2.FONT_HERSHEY_SIMPLEX, 12, (255, 255, 255), 36)
             if sideratio > 1.5:
-                cv2.putText(orig, "Oblong", (40, 580), cv2.FONT_HERSHEY_SIMPLEX, 11, (255, 255, 255), 11)
+                cv2.putText(orig, "Oblong", (40, 580), cv2.FONT_HERSHEY_SIMPLEX, 8, (255, 255, 255), 11)
             else:
-                cv2.putText(orig, "Circular", (40, 580), cv2.FONT_HERSHEY_SIMPLEX, 11, (255, 255, 255), 11)
+                cv2.putText(orig, "Circular", (40, 580), cv2.FONT_HERSHEY_SIMPLEX, 8, (255, 255, 255), 11)
             #cv2.putText(orig, "GuessCount: " + str(testavg / trueavg), (40, 580), cv2.FONT_HERSHEY_SIMPLEX, 6, (255, 255, 255), 11)
 
-            r = 720.0 / orig.shape[1]
-            dim = (720, int(orig.shape[0] * r))
+            r = 1440.0 / orig.shape[1]
+            dim = (1440, int(orig.shape[0] * r))
             resized = cv2.resize(orig, dim, interpolation=cv2.INTER_AREA)
 
-            cv2.imwrite(app.config['UPLOAD_FOLDER'] + "/" + filename, resized, [int(cv2.IMWRITE_JPEG_QUALITY), 40])
+            cv2.imwrite(app.config['UPLOAD_FOLDER'] + "/" + filename, resized, [int(cv2.IMWRITE_JPEG_QUALITY), 50])
 
             #print testavg/trueavg
             #for now, make string of count and return that as body to POST call
             scount = "Count:" + str(j)
-            print scount
+            print (scount)
             return scount   #redirect(url_for('uploaded_file', filename=filename, headers=headers))
     return '''
     <!doctype html>
@@ -417,7 +419,7 @@ def get_true_avg(contours):
 
     # get the median area of a pill to use as an avg size
     # Examples have come up where the median pill is still in the multipill size range, dropping the index down by 2
-    index = int(len(areaarray)) / 2
+    index = int(len(areaarray)) // 2
     if (index > 6):
         index = index - 2
     trueavg = areaarray[index]
@@ -440,22 +442,24 @@ def get_true_avg(contours):
             rect = cv2.minAreaRect(contour)
             box = cv2.boxPoints(rect)
             box = np.int0(box)
-            print "Side a: "
+            #print "Side a: "
             sidea = ((box[0][0] - box[1][0])**2 + (box[0][1] - box[1][1])**2) **0.5
-            print sidea
-            print "Side b: "
+            #print sidea
+            #print "Side b: "
             sideb = ((box[1][0] - box[2][0])**2 + (box[1][1] - box[2][1])**2) **0.5
-            print sideb
+            #print sideb
             sideratio = sidea/sideb
             if sideratio < 1:
                 sideratio = 1/sideratio
-            print "Ratio: " + str(sideratio)
-            print box
+            #print "Ratio: " + str(sideratio)
+            #print box
             break
 
-    print "New trueavg = " + str(trueavg)
+    print ("New trueavg = " + str(trueavg))
     return trueavg, sideratio
 
 if __name__ == '__main__':
-    app.run()
-    #app.run(host='127.0.0.1', port=5000)
+    #app.run()
+    app.run(host='localhost', port=5000)
+
+
