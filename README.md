@@ -1,7 +1,7 @@
 # Pill Counter Web Service 
 This project was made to solve a problem of counting pills quickly and accurately. I don't want a machine and I just want to take a picture.
 There are many issues with just taking a picture of pills as you know. Lighting effects how computer vision works a ton, along with writing on the pill,
-and contrast of the pills vs the background color.
+and contrast of the pills vs the background color. Honestly this could likely be done with some fancy machine learning stuff and less on the opencv side, however I enjoyed learning a lot about computer vision and its problems with this.
 
 I can sort the pills by shape such as Sphere or Oblong, and attempt to count.a
 
